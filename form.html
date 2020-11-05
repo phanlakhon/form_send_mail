@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form</title>
+        <style>
+            .language{
+                background-color: sandybrown;
+                padding: 10px;
+                width: 100px;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            }
+            .title{z-index: 1;}
+            .language.list{
+                display: none;
+                z-index: 0;
+            }
+
+        </style>
+</head>
+<body>
+    <div class="language title">
+        Language
+    </div>
+    <div class="language list">
+        <p>TH</p>
+        <p>EN</p>
+    </div>
+
+    <form  id="contactform" action="sendMail.php" method="post">
+        Name :              <input type="text" name="name"><br/>
+        E-mail :            <input type="text" name="email"><br/>
+        Company Name :      <input type="text" name="company_name"><br/>
+        Phone :             <input type="text" name="phone"><br/>
+        Convenient Time :   <input type="text" name="convenient_time"><br/>
+        Requirements :      <input type="text" name="requirements"><br/>
+        <button id="btn-submit" onclick="myFunction()" type="button">Send</button>
+    </form>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#btn-submit").click(function(){        
+                $("#contactform").submit(); // Submit the form
+            }); 
+        });
+</script> -->
+<script>
+    function myFunction() {
+      document.getElementById("contactform").submit();
+    }
+</script>
+
+
+</body>
+</html>
